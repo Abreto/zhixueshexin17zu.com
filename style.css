@@ -1,0 +1,57 @@
+body {
+    background-color: black;
+    color: green;
+}
+.withborder {
+    border-style: double;
+    border-color: chartreuse;
+}
+.tred {
+    color: red;
+}
+.shift2right {
+    float: right;
+}
+.shift2left {
+    float: left;
+}
+.clr {
+    clear: left;
+}
+.clearfix {
+    overflow: auto;
+}
+.main-container {
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.record-container{
+    border-top:double;
+    padding-top:5%;
+    padding-bottom:30%;
+    padding-left:10%;
+    padding-right:10%;
+}
+.class-container {
+    margin-top: -1px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 16%;
+    padding-right: 16%;
+    font-size:30px;
+    text-align: center;
+}
+.word-container {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 5%;
+    font-size:30px;
+    text-align: center;
+}
+.explain-container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
