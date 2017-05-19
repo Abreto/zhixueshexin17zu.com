@@ -11,9 +11,4 @@ $line .= "\n";
 $recorded = file_get_contents(STORAGE_FILE);
 file_put_contents(STORAGE_FILE, $recorded.$line);
 
-/*ob_start();
-print_r($_POST);
-file_put_contents(STORAGE_FILE, ob_get_contents());
-ob_end_flush();*/
-
 ?>

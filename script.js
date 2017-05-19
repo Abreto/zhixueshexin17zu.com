@@ -1,9 +1,6 @@
 function random01() {
     return Number(Math.random() > 0.5);
 }
-/*function $(id) {
-    return document.getElementById(id);
-}*/
 var visit_time = (new Date()).getTime();
 var game_time;
 var current = 0;
