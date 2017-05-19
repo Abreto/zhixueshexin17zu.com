@@ -1,10 +1,9 @@
 function random01() {
     return Number(Math.random() > 0.5);
 }
-function $(id) {
+/*function $(id) {
     return document.getElementById(id);
-}
-
+}*/
 var visit_time = (new Date()).getTime();
 var game_time;
 var current = 0;
@@ -19,12 +18,16 @@ function record(right, time) {
     }
 }
 function postdata() {
-    ;
+    $.post('record.php', {
+        'v':visit_time,
+        's':game_time,
+        't':tdata
+    });
 }
 function showone(id, rand) {
-    $('cls1').innerHTML = dic[id][rand];
-    $('cls2').innerHTML = dic[id][1-rand];
-    $('word').innerHTML = dic[id][2];
+    $('#cls1').html(dic[id][rand]);
+    $('#cls2').html(dic[id][1-rand]);
+    $('#word').html(dic[id][2]);
 }
 function endgame() {
     if(!ended) {
@@ -63,12 +66,13 @@ function nextround() {
             else if (e.charCode == 106) cid = 2;
             if( cid > 0 )
             {
-                $('cls'+cid).innerHTML += '<span class="tred">&#x2718;</span>';
+                var el = '#cls'+cid;
+                $(el).html($(el).html()+'<span class="tred">&#x2718;</span>');
             }
             var corretime = (new Date()).getTime();
             var used = corretime - begintime;
             record(0, used);
-            setTimeout("nextround()",1000);
+            setTimeout("nextround()",99);
         }
     }
 })();
