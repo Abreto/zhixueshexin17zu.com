@@ -1,8 +1,9 @@
 <?php
 
-define('STORAGE_FILE', 'record');
+define('STORAGE_FILE', 'record_new');
 
-$line = $_POST['v'] . " ";
+$line = $_POST['r']. " ";
+$line .= $_POST['v'] . " ";
 $line .= $_POST['s'];
 foreach($_POST['t'] as $ti ) {
     $line .= " " . $ti[0] . " " . $ti[1];

@@ -16,6 +16,7 @@ function record(right, time) {
 }
 function postdata() {
     $.post('record.php', {
+        'r':randomid,
         'v':visit_time,
         's':game_time,
         't':tdata
